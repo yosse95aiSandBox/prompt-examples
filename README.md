@@ -3,7 +3,7 @@
 こちらのサンプルは、[Amazon Bedrock](https://aws.amazon.com/jp/bedrock/?gclid=CjwKCAiA0PuuBhBsEiwAS7fsNW-hGK29vXE1lnYK9YASt7TXiklI_RR7qF6vzAF4n-1tWC0WjzgU-hoC_z8QAvD_BwE&trk=07e11748-d254-4d68-b9eb-c40a095bfc9d&sc_channel=ps&ef_id=CjwKCAiA0PuuBhBsEiwAS7fsNW-hGK29vXE1lnYK9YASt7TXiklI_RR7qF6vzAF4n-1tWC0WjzgU-hoC_z8QAvD_BwE:G:s&s_kwcid=AL!4422!3!692062154777!e!!g!!amazon%20bedrock!21048268287!157173579577) で利用可能な Anthropic 社の Claude モデルでプロンプトエンジニアリングした場合の例を示します。
 プロンプトの例は、[generative-ai-use-cases-jp/packages/web/src/components/PromptList.tsx](https://github.com/aws-samples/generative-ai-use-cases-jp/blob/03a2f7f31af1f334c7968e362f3b6b6751471a75/packages/web/src/components/PromptList.tsx) から拝借しています。
 
-[Prompt Engineering Guidee](https://www.promptingguide.ai/jp) から、プロンプトエンジニアリングについての詳しいガイドを確認することができます。
+[Prompt Engineering Guidee](https://www.promptingguide.ai/jp) から、Claude におけるプロンプトエンジニアリングについての詳しいガイドを確認することができます。
 
 > [!NOTE]
 > このリポジトリでは、[Langflow](https://www.langflow.org/) から Claude モデルを試すことを想定しているため、`{input_text}` はチャットボックスからの入力を期待しています。
@@ -16,9 +16,9 @@
   - [事前情報を与える](#事前情報を与える)
   - [返信メールの作成](#返信メールの作成)
   - [選択肢を与えて分類](#選択肢を与えて分類)
+  - [情報抽出](#情報抽出)
   - [個人情報の削除](#個人情報の削除)
   - [コードを生成させる](#コードを生成させる)
-  - [](#)
 
 ## フローイメージ
 ![alt text](image.png)
@@ -38,7 +38,9 @@ Langflow is an easy way to create flows. The drag-and-drop feature allows quick 
 
 <q></q>の xml タグで囲まれたユーザーからのLangflowに関する質問に対して、回答してください。
 
-<q>{input_text}</q>
+<q>
+{input_text}
+</q>
 
 回答は<answer>で始め、</answer>で終えてください。
 ```
@@ -94,6 +96,7 @@ Langflowとはなんですか？
 <mail>
 {input_text}
 </mail>
+
 <category>
 (A) 販売前の質問
 (B) 故障または不良品
@@ -111,6 +114,30 @@ Langflowとはなんですか？
 こんにちは。私の Mixmaster4000 は、操作すると奇妙なノイズを発生します。
 また、電子機器が燃えているような、少し煙のような、プラスチックのようなにおいがします。交換が必要です。
 ```
+
+## 情報抽出
+
+**テンプレート：**
+
+```xml
+以下の <text></text> の xml タグに囲われた文章からメールアドレスを正確に抽出してください。
+またメールアドレスとして成り立っていないものは抽出しないでください。
+<text>
+{input_text}
+</text>
+ただし出力は、<output>からはじめ、</output> タグで終え、1 行に 1 つずつ記入してください。
+メールアドレスは、入力テキストに正確に綴られている場合のみ記入してください。
+本文中にメールアドレスがない場合は、「N/A」と記入してください。それ以外は何も書かないでください
+```
+
+**input_text：**
+
+```
+私の連絡先は、hoge@example.comです。よく hoge@example のように間違えられるので注意してください。
+また、hoge+fuga@example.com や hoge@examples.jp でも受け取ることができます。
+メールが使えない方は、https://example.jp/qa のお問い合わせフォームから問い合わせることもできます。
+```
+
 
 ## 個人情報の削除
 
@@ -175,18 +202,4 @@ XXXは邪馬台国記念病院の心臓専門医です。連絡先は XXXまた�
 
 ```
 Amazon S3に対してAWS SDKを使ってユーザーがフォームから入力した音声ファイル music.mp3 を保存するコードを出力してください
-```
-
-## 
-
-**テンプレート：**
-
-```xml
-
-```
-
-**input_text：**
-
-```
-
 ```
