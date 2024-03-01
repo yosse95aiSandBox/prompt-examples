@@ -4,7 +4,7 @@
 
 ## もくじ
 
-- [デプロイ手順]](#デプロイ手順)
+- [デプロイ手順](#デプロイ手順)
   - [もくじ](#もくじ)
   - [1. CloudshellからLangflow実行環境を立ち上げる](#1-CloudshellからLangflow実行環境を立ち上げる)
   - [2. Langflowをデプロイする](#2-Langflowをデプロイする)
@@ -16,15 +16,15 @@
 1. [CloudShell](https://us-west-2.console.aws.amazon.com/cloudshell/home?region=us-west-2) にアクセスする
   ![CS1](./img/CS_1.png)  
 1. 以下のコードをターミナルに貼り付ける
-    ```
-    git clone https://github.com/aws-samples/cloud9-setup-for-prototyping
-    cd cloud9-setup-for-prototyping
-    jq '.name |= "c9-for-pip-langflow-0.6.8"' params.json > tmp.json && mv tmp.json params.json
-    jq '.image_id |= "amazonlinux-2023-x86_64"' params.json > tmp.json && mv tmp.json params.json
-    ./bin/bootstrap
-    ```
-    このような注意書きが表示されたら、チェックボックスにチェックした上で ```貼り付け``` ボタンをクリックして下さい
-    ![CS2](./img/CS_2.png)  
+  ```
+  git clone https://github.com/aws-samples/cloud9-setup-for-prototyping
+  cd cloud9-setup-for-prototyping
+  jq '.name |= "c9-for-pip-langflow-0.6.8"' params.json > tmp.json && mv tmp.json params.json
+  jq '.image_id |= "amazonlinux-2023-x86_64"' params.json > tmp.json && mv tmp.json params.json
+  ./bin/bootstrap
+  ```
+  このような注意書きが表示されたら、チェックボックスにチェックした上で ```貼り付け``` ボタンをクリックして下さい
+  ![CS2](./img/CS_2.png)  
 1. ```Done!```という表示が出力されるのを確認する
   ![CS3](./img/CS_3.png)
 
