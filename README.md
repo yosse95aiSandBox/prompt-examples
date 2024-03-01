@@ -1,7 +1,7 @@
 # プロンプトエンジニアリング サンプル
 
 こちらのサンプルは、[Amazon Bedrock](https://aws.amazon.com/jp/bedrock/?gclid=CjwKCAiA0PuuBhBsEiwAS7fsNW-hGK29vXE1lnYK9YASt7TXiklI_RR7qF6vzAF4n-1tWC0WjzgU-hoC_z8QAvD_BwE&trk=07e11748-d254-4d68-b9eb-c40a095bfc9d&sc_channel=ps&ef_id=CjwKCAiA0PuuBhBsEiwAS7fsNW-hGK29vXE1lnYK9YASt7TXiklI_RR7qF6vzAF4n-1tWC0WjzgU-hoC_z8QAvD_BwE:G:s&s_kwcid=AL!4422!3!692062154777!e!!g!!amazon%20bedrock!21048268287!157173579577) で利用可能な Anthropic 社の Claude モデルでプロンプトエンジニアリングした場合の例を示します。
-プロンプトの例は、[generative-ai-use-cases-jp/packages/web/src/components/PromptList.tsx](https://github.com/aws-samples/generative-ai-use-cases-jp/blob/03a2f7f31af1f334c7968e362f3b6b6751471a75/packages/web/src/components/PromptList.tsx) から拝借しています。
+プロンプトの例は、[generative-ai-use-cases-jp/packages/web/src/components/PromptList.tsx](https://github.com/aws-samples/generative-ai-use-cases-jp/blob/03a2f7f31af1f334c7968e362f3b6b6751471a75/packages/web/src/components/PromptList.tsx) から一部拝借しています。
 
 [Prompt Engineering Guidee](https://www.promptingguide.ai/jp) から、Claude におけるプロンプトエンジニアリングについての詳しいガイドを確認することができます。
 
@@ -138,6 +138,7 @@ Langflowとはなんですか？
 
 
 ## 5. 個人情報の削除
+Few-Shot プロンプティングの例となります。
 
 **テンプレート：**
 
