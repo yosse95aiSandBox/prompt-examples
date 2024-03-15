@@ -21,7 +21,7 @@
   - [6. コードを生成させる](#6-コードを生成させる)
 
 ## フローイメージ
-[フローテンプレートはこちら](https://github.com/yosse95aiSandBox/prompt-examples/blob/main/sample-flows/2. custom-prompt.json)
+[フローテンプレートはこちら](https://github.com/yosse95aiSandBox/prompt-examples/blob/main/sample-flows/2.%20custom-prompt.json)
 
 ![alt text](image.png)
 
