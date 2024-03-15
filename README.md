@@ -21,6 +21,8 @@
   - [6. コードを生成させる](#6-コードを生成させる)
 
 ## フローイメージ
+[フローテンプレートはこちら](https://github.com/yosse95aiSandBox/prompt-examples/blob/main/sample-flows/2.%20custom-prompt.json)
+
 ![alt text](image.png)
 
 ## 1. 事前情報を与える
