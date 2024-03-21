@@ -19,4 +19,5 @@ sudo -u ${USER} -i pyenv rehash
 sudo -u ${USER} -i pip install -U pip
 sudo -u ${USER} -i pip install langflow==0.6.10
 sudo -u ${USER} -i python -m langflow run --port 8080 --host 0.0.0.0
+aws configure set region us-west-2
 ```
