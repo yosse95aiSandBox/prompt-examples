@@ -14,10 +14,10 @@ sudo -u ${USER} -i source /home/${USER}/.bash_profile
 sudo -u ${USER} -i TMPDIR="${PWD}/tmp" pyenv install 3.11.5
 sudo -u ${USER} -i pyenv global 3.11.5
 sudo -u ${USER} -i pyenv rehash
+sudo -u ${USER} -i aws configure set region us-west-2
 
 
 sudo -u ${USER} -i pip install -U pip
 sudo -u ${USER} -i pip install langflow==0.6.10
 sudo -u ${USER} -i python -m langflow run --port 8080 --host 0.0.0.0
-aws configure set region us-west-2
 ```
