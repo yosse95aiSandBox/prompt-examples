@@ -1,6 +1,7 @@
 ## SSMから起動
 コピーボタンからコピーしてください。
 ```bash
+cd ~
 sudo dnf install -y gcc zlib-devel bzip2-devel readline-devel sqlite sqlite-devel openssl-devel tk-devel libffi-devel xz-devel
 
 sudo dnf install -y git
