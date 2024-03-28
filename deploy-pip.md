@@ -14,7 +14,7 @@ sudo -u ${USER} -i source /home/${USER}/.bash_profile
 sudo -u ${USER} -i TMPDIR="${PWD}/tmp" pyenv install 3.11.5
 sudo -u ${USER} -i pyenv global 3.11.5
 sudo -u ${USER} -i pyenv rehash
-sudo -u ${USER} -i aws configure set region us-west-2
+sudo -u ${USER} -i aws configure set region us-east-1
 
 
 sudo -u ${USER} -i pip install -U pip
